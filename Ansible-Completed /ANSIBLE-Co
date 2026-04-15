@@ -319,6 +319,15 @@ ansible-galaxy role import <your_github_username> <role-name>
 ```
 ---------------------------------------------------------------------------
 
+Space lift is used to manage both terraform and ansible to gether maintaining security and maintaining sensitive credentials
+order of execution.
+
+For example we have terraform when ever we have changes in terraform code then automatically trigger things in ansible
+inverntory file then automatically it have new hosts in inverntory then ansible will trigger things and do configuration.
+
+
+
+
 
 
 
