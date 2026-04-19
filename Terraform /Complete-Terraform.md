@@ -3,6 +3,28 @@ in real time organization we were writing all the things in vs code only there w
 
 We have devops team of 5 members, we used to write terrafrom code and stored in github and we store state file in s3 as a remote backend, so when ever need change i will clone the repo and make changes and verify by applay command raise a pull request PR once pr approved we have new terraform project in github in the same way once we use applay it automatically update statefile in s3.
 
+Provisioners:-
+this is very simple refer provision.md doc my boss, 
+
+Workspaces:-
+this is very important like we have diffrent environments right dev qa and prod, there how we can manage different env in a single terrafom by using workspaces so hear we simply have one terrafom folder inside the folder we create workspaces by using terafom workspace new dev or staging, so that in every workspace we have diffrent statefile separately without hardcode in root statefile, so once we have created workspace we initilize terraform init, then one new statefile will be created for that workspace separately
+
+Harshicorp Vault:
+
+
+Remote backend is to store state file in s3 with dynamodb locking,
+ALL CMD:
+terraform init
+terraform destroy
+terraform plan
+terraform show
+tree- cmd is used to see architecure of folders ond files in github
+terrafrom workspace -h - is used to get help of cmd 
+terraform workspace new dev or stage.
+terrafrom workspace select dev or stage
+
+
+
 # Infrastructure as Code(IaC)
 
 Before the advent of IaC, infrastructure management was typically a manual and time-consuming process. System administrators and operations teams had to:
